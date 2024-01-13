@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gender Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="methods.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="white-box">
+        
+      <div class="form-section">
+        <h1>Mr. or Ms.?</h1>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" autocomplete="off" id="name" name="name" placeholder="Enter your name" 
+            onchange="handleTextChange();"    
+            onpaste="this.onchange();"
+            oninput="this.onchange();"
+            >   
+        </div>
+        <div class="form-section">
+            <div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button onclick="handleSubmitData()">Submit</button>
+            <button onclick="handleSaveData()">Save</button>          
+        </div>
+      </div>
+
+      <div class="prediction-section">
+        <h1>Prediction:</h1>
+        <label id="prediction_class_label"></label>
+        <label id="prediction_val_label"></label>
+        <div class="text-box-container">
+            <textarea id="prediction" name="prediction" class="text-box" readonly></textarea>
+            <button class="clear-button" onclick="handleClearPrediction()">Clear</button>
+        </div>
+        <div>
+            <label class="error-label" id="error_label">error</label>
+        </div>
+      </div>
+    </div>
+  </div>  
+</body>
+</html>

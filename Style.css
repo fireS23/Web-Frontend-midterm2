@@ -1,0 +1,95 @@
+/*
+green: #c9dbb3
+orange: #f5ddc5
+brown: #7d6844
+white: #f6f4e8
+*/
+
+body {
+    margin: 0;
+    font-family: Comic Sans MS, 'Lato', 'Arial', sans-serif;
+    background: url('back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.white-box {
+    background-color: #c9dbb3;
+    padding: 10px;
+    border-radius: 15px;
+    border: 5px solid #7d6844;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+input {
+    background-color: #f6f4e8;
+}
+
+.button-container {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+button{
+    background-color: #f6f4e8;
+    border-radius: 25px ;
+    border: 2px solid #7d6844;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+
+button:hover,
+button:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #f5ddc5;
+}
+
+.prediction-section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.text-box-container {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.text-box {
+    position: absolute;
+    padding: 5px;
+    height: 75px;
+    width: 245px;
+    background-color: #f6f4e8;
+}
+
+.clear-button {
+    position: absolute;
+    bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.error-label {
+    color: red;
+}
